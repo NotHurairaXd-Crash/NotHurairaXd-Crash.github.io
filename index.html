@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crash Network - Premium Minecraft Server</title>
+    <link href="https://fonts.googleapis.com/css2?family=Minecraft&display=swap" rel="stylesheet">
+    <style>
+        /* Modern Minecraft-style CSS */
+        body {
+            font-family: 'Minecraft', Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://i.imgur.com/JqYeZvn.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            line-height: 1.6;
+        }
+        
+        .header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            text-align: center;
+            border-bottom: 5px solid #00a8ff;
+        }
+        
+        .header h1 {
+            color: #00a8ff;
+            font-size: 3.5em;
+            margin: 10px 0;
+            text-shadow: 3px 3px 6px #000000;
+        }
+        
+        .login-section {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 25px;
+            text-align: center;
+            margin: 30px auto;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 168, 255, 0.3);
+        }
+        
+        .btn {
+            background-color: #00a8ff;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            margin: 10px;
+            font-size: 1.2em;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Minecraft';
+        }
+        
+        .btn:hover {
+            background-color: #0095e0;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 168, 255, 0.4);
+        }
+        
+        .content {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            margin: 30px auto;
+            width: 80%;
+            max-width: 900px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        h2 {
+            color: #00a8ff;
+            border-bottom: 2px solid #00a8ff;
+            padding-bottom: 10px;
+        }
+        
+        .gamemodes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .gamemode {
+            background-color: rgba(0, 168, 255, 0.15);
+            border: 3px solid #00a8ff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .gamemode:hover {
+            transform: scale(1.05);
+            background-color: rgba(0, 168, 255, 0.25);
+        }
+        
+        .gamemode h3 {
+            color: #00a8ff;
+            margin-top: 0;
+        }
+        
+        .gamemode.lifesteal {
+            border-color: #ff3d3d;
+            background-color: rgba(255, 61, 61, 0.15);
+        }
+        
+        .gamemode.lifesteal h3 {
+            color: #ff3d3d;
+        }
+        
+        .gamemode.lifesteal:hover {
+            background-color: rgba(255, 61, 61, 0.25);
+        }
+        
+        .news-link {
+            color: #00a8ff;
+            text-decoration: none;
+            font-size: 1.1em;
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 15px;
+            border: 1px solid #00a8ff;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .news-link:hover {
+            background-color: rgba(0, 168, 255, 0.2);
+            text-decoration: none;
+        }
+        
+        .server-stats {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5em;
+            }
+            
+            .content, .login-section {
+                width: 90%;
+                padding: 20px;
+            }
+            
+            .gamemode {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to Crash Network!</h1>
+        <p>Join our premium Minecraft community today!</p>
+    </div>
+    
+    <div class="login-section">
+        <button class="btn">Login</button>
+        <button class="btn">Register</button>
+    </div>
+    
+    <div class="content">
+        <h2>About Crash Network</h2>
+        <p>Crash Network is a growing Minecraft server network with unique game modes and an active community.</p>
+        
+        <div class="server-stats">
+            <p>🟢 <strong>Server Status:</strong> Online</p>
+            <p>👥 <strong>Players:</strong> 124/200 online</p>
+            <p>🎮 <strong>IP:</strong> play.crashnet.fun</p>
+        </div>
+        
+        <h2>Featured Game Modes</h2>
+        <p>Experience these exciting game modes on Crash Network:</p>
+        
+        <div class="gamemodes">
+            <div class="gamemode lifesteal">
+                <h3>Lifesteal SMP</h3>
+                <p>Steal hearts from players in this hardcore survival experience! Permanent deaths until you reclaim hearts.</p>
+            </div>
+            <div class="gamemode">
+                <h3>PvP Practice</h3>
+                <p>Hone your combat skills with kits, arenas, and ranked matchmaking!</p>
+            </div>
+            <div class="gamemode">
+                <h3>Coming Soon</h3>
+                <p>New game modes in development - stay tuned!</p>
+            </div>
+        </div>
+        
+        <h2>Latest Updates</h2>
+        <p>New Lifesteal season starting July 1st! Fresh map with custom terrain generation.</p>
+        
+        <a href="#" class="news-link">View all announcements →</a>
+    </div>
+</body>
+</html>
