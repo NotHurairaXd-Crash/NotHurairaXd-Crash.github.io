@@ -263,6 +263,16 @@
             border-top: 3px solid #00a8ff;
         }
         
+        /* Logo Image */
+        .logo-image {
+            max-width: 600px;
+            width: 100%;
+            height: auto;
+            margin: 0 auto 20px;
+            display: block;
+            filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.8));
+        }
+        
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 2.5em;
@@ -270,6 +280,7 @@
             
             .header {
                 margin-top: 0;
+                padding: 20px;
             }
             
             .content, .login-section, .social-links {
@@ -284,6 +295,10 @@
             .navbar a {
                 padding: 10px 12px;
                 font-size: 1em;
+            }
+            
+            .logo-image {
+                max-width: 90%;
             }
         }
     </style>
@@ -300,7 +315,8 @@
     <!-- Home Section -->
     <div id="home">
         <div class="header">
-            <h1>Welcome to Crash Network</h1>
+            <!-- Replaced text title with your image -->
+            <img src="https://cdn.discordapp.com/attachments/1355566406682284312/1404537353741144155/2025072917150244.jpg" alt="Crash Network" class="logo-image">
             <p>Join India's fastest-growing Minecraft community!</p>
         </div>
         
@@ -337,119 +353,4 @@
                     <p>New game modes in development!</p>
                 </div>
             </div>
-        </div>
-    </div>
-    
-    <!-- Rules Section -->
-    <div id="rules" class="content" style="display: none;">
-        <h2>Server Rules</h2>
-        <p>To ensure everyone has a great experience, please follow these rules:</p>
-        
-        <ol class="rules-list">
-            <li>No hacking, cheating, or exploiting glitches</li>
-            <li>Be respectful to all players and staff</li>
-            <li>No inappropriate language or behavior</li>
-            <li>No spamming in chat</li>
-            <li>No advertising other servers</li>
-            <li>No griefing in non-PvP areas</li>
-            <li>Follow staff instructions</li>
-            <li>No racism, sexism, or discrimination of any kind</li>
-        </ol>
-        
-        <p>Breaking these rules may result in temporary or permanent bans.</p>
-    </div>
-    
-    <!-- Vote Section -->
-    <div id="vote" class="content" style="display: none;">
-        <h2>Vote for Our Server</h2>
-        <p>Voting helps our server grow! You can vote every 24 hours on these sites:</p>
-        
-        <div class="vote-sites">
-            <div class="vote-site">
-                <h3>Minecraft-MP</h3>
-                <a href="#" class="btn">Vote Now</a>
-            </div>
-            <div class="vote-site">
-                <h3>TopG</h3>
-                <a href="#" class="btn">Vote Now</a>
-            </div>
-            <div class="vote-site">
-                <h3>Planet Minecraft</h3>
-                <a href="#" class="btn">Vote Now</a>
-            </div>
-        </div>
-        
-        <p>Rewards for voting include in-game currency and special items!</p>
-    </div>
-    
-    <!-- News Section -->
-    <div id="news" class="content" style="display: none;">
-        <h2>Latest News</h2>
-        
-        <div class="news-item">
-            <h3>New Lifesteal Season Starting!</h3>
-            <p class="news-date">June 15, 2023</p>
-            <p>Our new Lifesteal season begins next week with custom terrain and new features!</p>
-            <a href="#" class="news-link">Read more →</a>
-        </div>
-        
-        <div class="news-item">
-            <h3>Server Maintenance</h3>
-            <p class="news-date">June 10, 2023</p>
-            <p>The server will be down for maintenance on June 12 from 2-4 AM IST.</p>
-            <a href="#" class="news-link">Read more →</a>
-        </div>
-        
-        <div class="news-item">
-            <h3>New PvP Maps Added</h3>
-            <p class="news-date">June 5, 2023</p>
-            <p>Check out our 5 new PvP practice maps with unique designs!</p>
-            <a href="#" class="news-link">Read more →</a>
-        </div>
-    </div>
-    
-    <!-- Social Media Links -->
-    <div class="social-links">
-        <a href="https://discord.gg/EAPFWu4xWU" target="_blank">Discord</a>
-        <a href="https://youtube.com/@crashnetworkop?si=NJGphBvlbT6KzEE2" target="_blank">YouTube</a>
-        <a href="https://www.instagram.com/crashnetworkog?igsh=MTVhMXE4ZWJ1ajExMA==" target="_blank">Instagram</a>
-    </div>
-    
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Crash Network. All rights reserved.</p>
-        <p>Not affiliated with Mojang or Microsoft.</p>
-        <p>Minecraft is a trademark of Mojang Studios</p>
-    </footer>
-
-    <script>
-        // Simple tab navigation
-        document.querySelectorAll('.navbar a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Hide all content sections
-                document.querySelectorAll('.content').forEach(section => {
-                    section.style.display = 'none';
-                });
-                
-                // Show selected section
-                const targetId = this.getAttribute('href').substring(1);
-                document.getElementById(targetId).style.display = 'block';
-                
-                // Update active link
-                document.querySelectorAll('.navbar a').forEach(navLink => {
-                    navLink.classList.remove('active');
-                });
-                this.classList.add('active');
-                
-                // Scroll to top
-                window.scrollTo(0, 0);
-            });
-        });
-        
-        // Show home section by default
-        document.getElementById('home').style.display = 'block';
-    </script>
-</body>
-</html>
+        </
