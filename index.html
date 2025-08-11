@@ -20,11 +20,43 @@
             line-height: 1.6;
         }
         
+        /* Navigation Bar */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 3px solid #00a8ff;
+        }
+        
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 1.2em;
+            margin: 0 5px;
+            transition: all 0.3s;
+        }
+        
+        .navbar a:hover {
+            color: #00a8ff;
+            text-decoration: underline;
+        }
+        
+        .navbar a.active {
+            color: #00a8ff;
+            font-weight: bold;
+        }
+        
         .header {
             background-color: rgba(0, 0, 0, 0.8);
             padding: 30px;
             text-align: center;
             border-bottom: 5px solid #00a8ff;
+            margin-top: 60px;
         }
         
         .header h1 {
@@ -147,65 +179,276 @@
             border: 1px solid #333;
         }
         
+        /* Rules Section */
+        .rules-list {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        
+        .rules-list li {
+            margin-bottom: 10px;
+            padding-left: 10px;
+            border-left: 2px solid #00a8ff;
+        }
+        
+        /* Vote Section */
+        .vote-sites {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .vote-site {
+            background-color: rgba(0, 168, 255, 0.1);
+            border: 2px solid #00a8ff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 200px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .vote-site:hover {
+            transform: scale(1.05);
+            background-color: rgba(0, 168, 255, 0.2);
+        }
+        
+        /* News Section */
+        .news-item {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #00a8ff;
+        }
+        
+        .news-date {
+            color: #aaa;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        
+        /* Social Media Links */
+        .social-links {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 30px auto;
+            width: 80%;
+            max-width: 900px;
+            border-radius: 15px;
+        }
+        
+        .social-links a {
+            color: #00a8ff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            border-top: 3px solid #00a8ff;
+        }
+        
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 2.5em;
             }
             
-            .content, .login-section {
+            .header {
+                margin-top: 0;
+            }
+            
+            .content, .login-section, .social-links {
                 width: 90%;
                 padding: 20px;
             }
             
-            .gamemode {
+            .gamemode, .vote-site {
                 width: 100%;
+            }
+            
+            .navbar a {
+                padding: 10px 12px;
+                font-size: 1em;
             }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Welcome to Crash Network</h1>
-        <p>Join India's fastest-growing Minecraft community!</p>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#rules">Rules</a>
+        <a href="#vote">Vote</a>
+        <a href="#news">News</a>
     </div>
     
-    <div class="login-section">
-        <button class="btn">Login</button>
-        <button class="btn">Register</button>
+    <!-- Home Section -->
+    <div id="home">
+        <div class="header">
+            <h1>Welcome to Crash Network</h1>
+            <p>Join India's fastest-growing Minecraft community!</p>
+        </div>
+        
+        <div class="login-section">
+            <button class="btn">Login</button>
+            <button class="btn">Register</button>
+        </div>
+        
+        <div class="content">
+            <h2>About Crash Network</h2>
+            <p>Crash Network is India's #1 Minecraft Server with a community of over 300,000 players.</p>
+            
+            <div class="server-stats">
+                <p>🟢 <strong>Server Status:</strong> Online</p>
+                <p>👥 <strong>Players:</strong> 124/200 online</p>
+                <p>🎮 <strong>IP:</strong> play.crashnet.fun</p>
+            </div>
+            
+            <h2>Featured Game Modes</h2>
+            <p>Experience these exciting game modes on Crash Network:</p>
+            
+            <div class="gamemodes">
+                <div class="gamemode lifesteal">
+                    <h3>Lifesteal SMP</h3>
+                    <p>Steal hearts from players in this hardcore survival experience!</p>
+                </div>
+                <div class="gamemode">
+                    <h3>PvP Practice</h3>
+                    <p>Hone your combat skills with kits and arenas!</p>
+                </div>
+                <div class="gamemode">
+                    <h3>Coming Soon</h3>
+                    <p>New game modes in development!</p>
+                </div>
+            </div>
+        </div>
     </div>
     
-    <div class="content">
-        <h2>About Crash Network</h2>
-        <p>Crash Network is India's #1 Minecraft Server with a community of over 300,000 players.</p>
+    <!-- Rules Section -->
+    <div id="rules" class="content" style="display: none;">
+        <h2>Server Rules</h2>
+        <p>To ensure everyone has a great experience, please follow these rules:</p>
         
-        <div class="server-stats">
-            <p>🟢 <strong>Server Status:</strong> Online</p>
-            <p>👥 <strong>Players:</strong> 124/200 online</p>
-            <p>🎮 <strong>IP:</strong> play.crashnet.fun</p>
-        </div>
+        <ol class="rules-list">
+            <li>No hacking, cheating, or exploiting glitches</li>
+            <li>Be respectful to all players and staff</li>
+            <li>No inappropriate language or behavior</li>
+            <li>No spamming in chat</li>
+            <li>No advertising other servers</li>
+            <li>No griefing in non-PvP areas</li>
+            <li>Follow staff instructions</li>
+            <li>No racism, sexism, or discrimination of any kind</li>
+        </ol>
         
-        <h2>Featured Game Modes</h2>
-        <p>Experience these exciting game modes on Crash Network:</p>
-        
-        <div class="gamemodes">
-            <div class="gamemode lifesteal">
-                <h3>Lifesteal SMP</h3>
-                <p>Steal hearts from players in this hardcore survival experience!</p>
-            </div>
-            <div class="gamemode">
-                <h3>PvP Practice</h3>
-                <p>Hone your combat skills with kits and arenas!</p>
-            </div>
-            <div class="gamemode">
-                <h3>Coming Soon</h3>
-                <p>New game modes in development!</p>
-            </div>
-        </div>
-        
-        <h2>Latest Updates</h2>
-        <p>New Lifesteal season starting soon with custom terrain!</p>
-        
-        <a href="#" class="news-link">View all announcements →</a>
+        <p>Breaking these rules may result in temporary or permanent bans.</p>
     </div>
+    
+    <!-- Vote Section -->
+    <div id="vote" class="content" style="display: none;">
+        <h2>Vote for Our Server</h2>
+        <p>Voting helps our server grow! You can vote every 24 hours on these sites:</p>
+        
+        <div class="vote-sites">
+            <div class="vote-site">
+                <h3>Minecraft-MP</h3>
+                <a href="#" class="btn">Vote Now</a>
+            </div>
+            <div class="vote-site">
+                <h3>TopG</h3>
+                <a href="#" class="btn">Vote Now</a>
+            </div>
+            <div class="vote-site">
+                <h3>Planet Minecraft</h3>
+                <a href="#" class="btn">Vote Now</a>
+            </div>
+        </div>
+        
+        <p>Rewards for voting include in-game currency and special items!</p>
+    </div>
+    
+    <!-- News Section -->
+    <div id="news" class="content" style="display: none;">
+        <h2>Latest News</h2>
+        
+        <div class="news-item">
+            <h3>New Lifesteal Season Starting!</h3>
+            <p class="news-date">June 15, 2023</p>
+            <p>Our new Lifesteal season begins next week with custom terrain and new features!</p>
+            <a href="#" class="news-link">Read more →</a>
+        </div>
+        
+        <div class="news-item">
+            <h3>Server Maintenance</h3>
+            <p class="news-date">June 10, 2023</p>
+            <p>The server will be down for maintenance on June 12 from 2-4 AM IST.</p>
+            <a href="#" class="news-link">Read more →</a>
+        </div>
+        
+        <div class="news-item">
+            <h3>New PvP Maps Added</h3>
+            <p class="news-date">June 5, 2023</p>
+            <p>Check out our 5 new PvP practice maps with unique designs!</p>
+            <a href="#" class="news-link">Read more →</a>
+        </div>
+    </div>
+    
+    <!-- Social Media Links -->
+    <div class="social-links">
+        <a href="https://discord.gg/EAPFWu4xWU" target="_blank">Discord</a>
+        <a href="https://youtube.com/@crashnetworkop?si=NJGphBvlbT6KzEE2" target="_blank">YouTube</a>
+        <a href="https://www.instagram.com/crashnetworkog?igsh=MTVhMXE4ZWJ1ajExMA==" target="_blank">Instagram</a>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>© 2023 Crash Network. All rights reserved.</p>
+        <p>Not affiliated with Mojang or Microsoft.</p>
+        <p>Minecraft is a trademark of Mojang Studios</p>
+    </footer>
+
+    <script>
+        // Simple tab navigation
+        document.querySelectorAll('.navbar a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Hide all content sections
+                document.querySelectorAll('.content').forEach(section => {
+                    section.style.display = 'none';
+                });
+                
+                // Show selected section
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).style.display = 'block';
+                
+                // Update active link
+                document.querySelectorAll('.navbar a').forEach(navLink => {
+                    navLink.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+            });
+        });
+        
+        // Show home section by default
+        document.getElementById('home').style.display = 'block';
+    </script>
 </body>
 </html>
